@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="es" class="m-0 p-0 h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Define el color de la barra superior/navegador en dispositivos móviles -->
+    <meta name="theme-color" content="#082f49">
+    <title>El Paisaje Cotidiano - Trabajo y Dignidad Humana</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#035388',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+        
+        /* Reset de márgenes global para evitar bordes blancos en GitHub Pages o móviles */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100%;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+
+        /* Standard printable styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background-color: #ffffff;
+                color: #000000;
+            }
+            .tab-content {
+                display: block !important;
+            }
+            #tab1, #tab2 {
+                display: none !important;
+            }
+            #tab3 {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body class="m-0 p-0 min-h-screen text-slate-800 flex flex-col justify-between selection:bg-brand-500 selection:text-white bg-slate-50">
+
+    <div>
+        <!-- Navigation Header -->
+        <header class="bg-gradient-to-r from-brand-900 via-brand-800 to-brand-950 text-white shadow-md sticky top-0 z-50 no-print">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between py-4 gap-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-brand-700/60 rounded-xl border border-brand-500/30">
+                            <i data-lucide="compass" class="w-7 h-7 text-brand-200"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold tracking-tight text-white">El Paisaje Cotidiano</h1>
+                            <p class="text-xs text-brand-200">Orientación Vocacional & Reflexión del Trabajo</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Tabs -->
+                    <nav class="flex p-1 bg-brand-950/60 rounded-xl border border-brand-700/50 w-full sm:w-auto">
+                        <button onclick="switchTab('tab1')" id="nav-tab1" class="tab-btn flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-brand-600 text-white shadow-sm">
+                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                            <span>1. Presentación</span>
+                        </button>
+                        <button onclick="switchTab('tab2')" id="nav-tab2" class="tab-btn flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-brand-200 hover:text-white hover:bg-brand-800/50">
+                            <i data-lucide="check-square" class="w-4 h-4"></i>
+                            <span>2. Consignas</span>
+                        </button>
+                        <button onclick="switchTab('tab3')" id="nav-tab3" class="tab-btn flex-1 sm:flex-initial flex items-center justify-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-brand-200 hover:text-white hover:bg-brand-800/50">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            <span>3. Resumen</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+            <!-- TAB 1: PRESENTACIÓN TEMÁTICA -->
+            <section id="tab1" class="tab-content block space-y-8 animate-fadeIn">
+                
+                <!-- Quote Banner -->
+                <div class="relative bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 overflow-hidden">
+                    <div class="absolute top-0 right-0 transform translate-x-8 -translate-y-8 w-48 h-48 bg-brand-50 rounded-full blur-2xl -z-10"></div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="p-4 bg-brand-50 text-brand-600 rounded-2xl shrink-0 border border-brand-100">
+                            <i data-lucide="quote" class="w-10 h-10"></i>
+                        </div>
+                        <div class="space-y-3">
+                            <blockquote class="font-serif italic text-lg sm:text-xl text-slate-700 leading-relaxed">
+                                "El trabajo no es un simple instrumento, sino que expresa y acrecienta la dignidad de nuestra vida. Es una necesidad inherente a la condición humana, un camino habitual hacia la madurez, el desarrollo y la realización personal."
+                            </blockquote>
+                            <p class="text-sm font-semibold text-brand-700 tracking-wide uppercase">
+                                — Papa León XIV <span class="font-normal text-slate-500 lowercase">· Magnifica humanitas, n°149</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concept Grid -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Concept 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-4 hover:border-brand-300 transition-colors">
+                        <div class="flex items-center space-x-3 text-brand-700">
+                            <div class="p-2 bg-brand-50 rounded-lg">
+                                <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="text-lg font-bold">El Trabajo y la Dignidad Humana</h2>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            El Papa León XIV nos recuerda que el trabajo no es un mero medio para obtener recursos económicos. Desde una mirada que considera la <strong>dignidad humana inherente</strong> a todos nosotros (hechos a imagen y semejanza del Creador), estamos llamados a realizarla a través del trabajo, donde ponemos en juego diversas dimensiones de nuestra persona.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Cualquier elección respecto a una actividad laboral, siempre que tengamos la gracia de la elección, es una oportunidad de elegir un camino hacia nuestra realización en dignidad.
+                        </p>
+                    </div>
+
+                    <!-- Concept 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-4 hover:border-brand-300 transition-colors">
+                        <div class="flex items-center space-x-3 text-brand-700">
+                            <div class="p-2 bg-brand-50 rounded-lg">
+                                <i data-lucide="sun" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="text-lg font-bold">El Paisaje Cotidiano</h2>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Te invitamos a dar un paso en profundidad: pensemos en nuestro propio camino, en aquello a lo que dedicaremos nuestras horas.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Si ya tenés alguna opción de tu interés, será una excelente oportunidad de enriquecer la reflexión. Si empezás hoy, bienvenida la apertura de la pregunta para explorar las formas en que querés habitar tu día a día.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Instruction Box -->
+                <div class="bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-2xl p-6 sm:p-8 shadow-md relative overflow-hidden">
+                    <div class="relative z-10 space-y-4 max-w-3xl">
+                        <h3 class="text-xl font-bold flex items-center space-x-2">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-brand-300"></i>
+                            <span>¿Qué vas a hacer en esta guía?</span>
+                        </h3>
+                        <p class="text-brand-100 text-sm sm:text-base leading-relaxed">
+                            Pensaremos en el lugar en el cual nos gustaría estar:
+                        </p>
+                        <ul class="space-y-2 text-sm text-brand-100 list-disc list-inside pl-2">
+                            <li>Poniendo en el Señor la esperanza de que nos mostrará los caminos para llegar a realizarlo.</li>
+                            <li>Sabiendo que es el lugar en donde podremos dejar salir lo mejor de nosotros.</li>
+                            <li>Descubriendo cosas nuevas que sumar a la propia vida o formas nuevas de expresar lo que ya es parte de ella.</li>
+                        </ul>
+                        <div class="pt-4">
+                            <button onclick="switchTab('tab2')" class="inline-flex items-center space-x-2 px-6 py-3 bg-white text-brand-900 rounded-xl font-semibold shadow-lg hover:bg-brand-50 transition-all transform hover:-translate-y-0.5">
+                                <span>Comenzar Actividad y Preguntas</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: ACTIVIDAD Y CONSIGNAS -->
+            <section id="tab2" class="tab-content hidden space-y-8">
+                
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-4">
+                    <h2 class="text-2xl font-bold text-slate-800">Cuestionario de Reflexión Individual</h2>
+                    <p class="text-slate-600 text-sm">
+                        Responde las siguientes preguntas seleccionando las opciones que mejor se adapten a tus preferencias e inclinaciones. Tus respuestas se irán guardando automáticamente en tu dispositivo.
+                    </p>
+                    
+                    <!-- Pauta de Entrega Destacada -->
+                    <div class="p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start space-x-3 text-amber-900 text-sm">
+                        <i data-lucide="calendar" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                        <div>
+                            <span class="font-bold">Entrega de la actividad:</span> El resumen de respuestas y la descripción final (página 3) deberá entregarse de forma impresa el día <strong>martes 29/09</strong>. En esa página verás la opción de <strong>"Imprimir / Guardar PDF"</strong> para tu producción.
+                        </div>
+                    </div>
+                </div>
+
+                <form id="quiz-form" onchange="autoSaveData(); updateSummary();" class="space-y-6">
+
+                    <!-- Basic Personal Data -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-4">
+                        <h3 class="font-bold text-brand-800 text-lg border-b pb-2 flex items-center space-x-2">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                            <span>Información General</span>
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Hoy es (Fecha)</label>
+                                <input type="date" id="q_fecha" oninput="autoSaveData(); updateSummary();" class="w-full px-4 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Soy (Nombre y Apellido)</label>
+                                <input type="text" id="q_nombre" oninput="autoSaveData(); updateSummary();" placeholder="Escribí tu nombre..." class="w-full px-4 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-800">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 1: Vínculo Social e Interacción -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-6">
+                        <h3 class="font-bold text-brand-800 text-lg border-b pb-2 flex items-center space-x-2">
+                            <i data-lucide="users" class="w-5 h-5"></i>
+                            <span>Vínculo Social e Interacción</span>
+                        </h3>
+
+                        <!-- Question 1 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q1">1. Soy alguien que se siente más cómodo/a...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_comodidad" value="Interactuando con personas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Interactuando con personas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_comodidad" value="Utilizando objetos / máquinas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Utilizando objetos / máquinas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_comodidad" value="Creando cosas nuevas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Creando cosas nuevas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q2">2. Me desenvuelvo más ágilmente en un espacio...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_espacio_personas" value="En el que hay mucha gente" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">En el que hay mucha gente</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_espacio_personas" value="En el que no hay nadie más que yo" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">En el que no hay nadie más que yo</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_espacio_personas" value="En el que hay cantidades moderadas de personas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">En el que hay cantidades moderadas de personas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q3">3. Tengo más facilidad para tratar con...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_grupo_etario" value="Niños y adolescentes más jóvenes" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Niños y adolescentes más jóvenes</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_grupo_etario" value="Jóvenes y adultos" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Jóvenes y adultos</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_grupo_etario" value="Gente mayor" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Gente mayor</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_grupo_etario" value="Gente de todas las edades" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Gente de todas las edades</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q4">4. Cuando alguien viene y me trae problemas...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_problemas" value="Escucho y empatizo sin apuro" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Escucho y empatizo sin apuro</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_problemas" value="Me enfoco en la solución directamente" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Me enfoco en la solución directamente</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_problemas" value="Prefiero no estar escuchando problemas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Prefiero no estar escuchando problemas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q5">5. Creo que trabajar con familiares o amigos es...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_familiares" value="Algo a evitar" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Algo a evitar</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_familiares" value="Algo que no me molestaría pero no es prioridad" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">No me molestaría, pero no es prioridad</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_familiares" value="Algo que me encantaría" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Algo que me encantaría</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q6">6. Me gustaría que las personas se lleven de mi trabajo:</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_huella" value="Soluciones a problemas" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Soluciones a problemas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_huella" value="Buenos productos" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Buenos productos</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_huella" value="Nuevas ideas o formas de pensar" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Nuevas ideas o formas de pensar</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_huella" value="Experiencias agradables" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Experiencias agradables</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_huella" value="Cambios en sus vidas" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Cambios en sus vidas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_huella" value="No es algo relevante para mí" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">No es algo relevante para mí</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Categoría 2: Modalidad y Entorno de Trabajo -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-6">
+                        <h3 class="font-bold text-brand-800 text-lg border-b pb-2 flex items-center space-x-2">
+                            <i data-lucide="building" class="w-5 h-5"></i>
+                            <span>Modalidad y Entorno de Trabajo</span>
+                        </h3>
+
+                        <!-- Question 7 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q7">7. Me gusta más estar...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_espacio_tipo" value="En espacios al aire libre" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">En espacios al aire libre</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_espacio_tipo" value="En espacios cerrados" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">En espacios cerrados</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_espacio_tipo" value="Ambos me sientan bien" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Ambos me sientan bien</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q8">8. Soy alguien que gusta más de...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_movilidad" value="Moverse de un lado al otro" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Moverse de un lado al otro</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_movilidad" value="Estar en un lugar fijo" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Estar en un lugar fijo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q9">9. Me gustaría viajar por mi trabajo fuera de mi ciudad...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_viajes" value="Ocasionalmente" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Ocasionalmente</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_viajes" value="Nunca" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Nunca</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_viajes" value="Constantemente" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Constantemente</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q10">10. Me gusta más verme...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_vestimenta" value="Usando uniformes o ropa formal" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Usando uniformes o ropa formal</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_vestimenta" value="Usando ropa casual" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Usando ropa casual</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 11 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q11">11. Me imagino en un entorno en el que haya de manera habitual:</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Vehículos" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Vehículos</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Máquinas de entretenimiento" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Máquinas de entretenimiento</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Herramientas informáticas" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Herramientas informáticas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Herramientas productivas" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Herramientas productivas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Animales y plantas" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Animales y plantas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Personas" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Personas</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Buenas vistas al horizonte" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Buenas vistas al horizonte</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Rica comida" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Rica comida</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="checkbox" name="q_entorno_elementos" value="Buena música" class="text-brand-600 rounded focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Buena música</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 12 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q12">12. Considero que las redes sociales deberían ser...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_redes" value="El recurso clave de mi trabajo" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">El recurso clave de mi trabajo</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_redes" value="Para nada importantes" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Para nada importantes</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_redes" value="Útiles, pero no imprescindibles" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Útiles, pero no imprescindibles</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Categoría 3: Perfil Personal y Dinámica de Trabajo -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-6">
+                        <h3 class="font-bold text-brand-800 text-lg border-b pb-2 flex items-center space-x-2">
+                            <i data-lucide="sliders" class="w-5 h-5"></i>
+                            <span>Perfil Personal y Dinámica de Trabajo</span>
+                        </h3>
+
+                        <!-- Question 13 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q13">13. Me considero más efectivo/a...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_efectividad" value="Dando instrucciones a otros" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Dando instrucciones a otros</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_efectividad" value="Cumpliendo pautas de forma diligente" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Cumpliendo pautas de forma diligente</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_efectividad" value="Organizando espacios o grupos de personas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Organizando espacios o grupos</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_efectividad" value="Exponiendo ideas o habilidades" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Exponiendo ideas o habilidades</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 14 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q14">14. Me considero una persona...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_estructura" value="Estructurada" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Estructurada</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_estructura" value="Descontracturada" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Descontracturada</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 15 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q15">15. Me considero una persona...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_creatividad" value="Creativa" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Creativa</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_creatividad" value="Operativa" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Operativa</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 16 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q16">16. Ante tareas a realizar frente a otros, me gusta más...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_escena" value="Ocupar el centro de la escena" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Ocupar el centro de la escena</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_escena" value="Estar tras bambalinas" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Estar tras bambalinas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 17 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q17">17. Preferiría destacarme por mi...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_destaque" value="Cercanía y alegría" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Cercanía y alegría</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_destaque" value="Profesionalismo y capacidad" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Profesionalismo y capacidad</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_destaque" value="Seriedad y compromiso" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Seriedad y compromiso</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 18 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q18">18. Soy una persona que gusta más de...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_ritmo" value="Demorarse lo necesario para resolver un asunto" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Demorarse lo necesario para resolver</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_ritmo" value="Resolver rápido" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Resolver rápido</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 19 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q19">19. Creo que me sentaría más cómodo/a...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_duracion_tarea" value="Que mi tarea comience y termine al día" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Que mi tarea comience y termine al día</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_duracion_tarea" value="Trabajar con proyectos que se construyen en el tiempo" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Proyectos a largo plazo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Categoría 4: Proyección Futura y Aprendizaje -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-6">
+                        <h3 class="font-bold text-brand-800 text-lg border-b pb-2 flex items-center space-x-2">
+                            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            <span>Proyección Futura y Aprendizaje</span>
+                        </h3>
+
+                        <!-- Question 20 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q20">20. Me imagino en los próximos años...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_proximos_anos" value="Estudiando en el nivel superior" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Estudiando en el nivel superior</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_proximos_anos" value="Trabajando en relación de dependencia" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Trabajando en relación de dependencia</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_proximos_anos" value="Construyendo proyectos propios" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Construyendo proyectos propios</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_proximos_anos" value="Una combinación de varios" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Una combinación de varios</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 21 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q21">21. Para adquirir nuevas habilidades me gustaría...</p>
+                            <div class="grid sm:grid-cols-3 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_aprendizaje" value="Aprender en una institución" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Aprender en una institución</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_aprendizaje" value="Aprender de forma autodidacta" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Aprender de forma autodidacta</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_aprendizaje" value="Aprender haciendo" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Aprender haciendo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 22 -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-800" id="label_q22">22. Una persona que me inspira y de la que me gustaría aprender es...</label>
+                            <input type="text" id="q_persona_inspiracion" oninput="autoSaveData(); updateSummary();" placeholder="Ej: Un profesor, familiar, referente..." class="w-full px-4 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-800">
+                        </div>
+
+                        <!-- Question 23 -->
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold text-slate-800" id="label_q23">23. Siento que prefiero pensar en mi futuro priorizando...</p>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_prioridad_futuro" value="Mi experiencia personal" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">Mi experiencia personal</span>
+                                </label>
+                                <label class="option-card flex items-center p-3 border rounded-xl cursor-pointer hover:bg-slate-50 transition-all">
+                                    <input type="radio" name="q_prioridad_futuro" value="En base a las necesidades de mi entorno" class="text-brand-600 focus:ring-brand-500">
+                                    <span class="ml-2 text-sm text-slate-700">En base a las necesidades de mi entorno</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Question 24 -->
+                        <div class="space-y-3">
+                            <label class="block text-sm font-semibold text-slate-800" id="label_q24">
+                                24. Siento que, del 1 al 10, me preocupa el nivel económico a alcanzar:
+                            </label>
+                            <div class="flex items-center space-x-4 bg-slate-50 p-4 rounded-xl border">
+                                <span class="text-sm font-bold text-slate-500">1 (Poco)</span>
+                                <input type="range" id="q_economico" min="1" max="10" value="5" oninput="document.getElementById('q_econ_val').innerText = this.value; autoSaveData(); updateSummary();" class="w-full accent-brand-600 cursor-pointer">
+                                <span class="text-sm font-bold text-slate-500">10 (Mucho)</span>
+                                <span id="q_econ_val" class="px-3 py-1 bg-brand-600 text-white font-bold rounded-lg text-sm">5</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+                <!-- Next Page CTA Button -->
+                <div class="flex justify-between items-center pt-4">
+                    <button onclick="saveManual()" class="inline-flex items-center space-x-2 px-5 py-2.5 bg-emerald-600 text-white rounded-xl font-medium shadow-sm hover:bg-emerald-700 transition-all">
+                        <i data-lucide="save" class="w-4 h-4"></i>
+                        <span>Guardar Progreso</span>
+                    </button>
+                    <button onclick="switchTab('tab3')" class="inline-flex items-center space-x-2 px-8 py-3 bg-brand-700 text-white rounded-xl font-semibold shadow-md hover:bg-brand-800 transition-all transform hover:-translate-y-0.5">
+                        <span>Ir al Resumen y Redacción (Página 3)</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- TAB 3: RESUMEN Y REFLEXIÓN ESCRITA -->
+            <section id="tab3" class="tab-content hidden space-y-8">
+                
+                <!-- Summary Header -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 space-y-2">
+                    <div class="flex justify-between items-center flex-wrap gap-4">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800">Mi Paisaje Cotidiano - Resumen & Redacción</h2>
+                            <p class="text-slate-600 text-sm">
+                                Revisa las opciones elegidas y redacta en los 3 párrafos correspondientes la escena de tu entorno laboral deseado.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap space-x-2 gap-y-2 no-print">
+                            <button onclick="saveManual()" class="flex items-center space-x-1.5 px-4 py-2 bg-emerald-600 text-white hover:bg-emerald-700 rounded-lg text-sm font-medium transition-colors shadow-sm">
+                                <i data-lucide="save" class="w-4 h-4"></i>
+                                <span>Guardar</span>
+                            </button>
+                            <button onclick="copyToClipboard()" class="flex items-center space-x-1.5 px-4 py-2 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded-lg text-sm font-medium transition-colors">
+                                <i data-lucide="copy" class="w-4 h-4"></i>
+                                <span>Copiar Todo</span>
+                            </button>
+                            <button onclick="window.print()" class="flex items-center space-x-1.5 px-4 py-2 bg-brand-600 text-white hover:bg-brand-700 rounded-lg text-sm font-medium transition-colors shadow-sm">
+                                <i data-lucide="printer" class="w-4 h-4"></i>
+                                <span>Imprimir / Guardar PDF</span>
+                            </button>
+                            <button onclick="resetData()" class="flex items-center space-x-1.5 px-3 py-2 bg-rose-50 text-rose-600 hover:bg-rose-100 rounded-lg text-sm font-medium transition-colors">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                <span>Reiniciar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    
+                    <!-- Selected Answers Summary Column -->
+                    <div class="lg:col-span-1 space-y-4">
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 sticky top-24">
+                            <h3 class="font-bold text-brand-800 text-base border-b pb-3 mb-4 flex items-center space-x-2">
+                                <i data-lucide="list-checks" class="w-5 h-5 text-brand-600"></i>
+                                <span>Respuestas Seleccionadas</span>
+                            </h3>
+                            
+                            <div id="summary-content" class="space-y-4 text-xs text-slate-600 max-h-[70vh] overflow-y-auto pr-1">
+                                <!-- Dynamic JS Injection -->
+                                <p class="text-slate-400 italic">No has seleccionado opciones aún en la Pestaña 2.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writing Essay Area Column -->
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80 space-y-6">
+                            
+                            <div class="bg-brand-50 border border-brand-100 rounded-xl p-4 space-y-2">
+                                <h4 class="font-semibold text-brand-900 text-sm flex items-center space-x-2">
+                                    <i data-lucide="edit-3" class="w-4 h-4 text-brand-600"></i>
+                                    <span>Consigna de Redacción</span>
+                                </h4>
+                                <p class="text-xs text-brand-800 leading-relaxed">
+                                    Realizá en <strong>3 párrafos</strong> la descripción de tu paisaje cotidiano, describiendo una escena propia del entorno en el que te gustaría desempeñarte diariamente (qué verás todos los días, el clima en el que te gustaría habitar, las horas que vas a entregar a lo que hagas, etc.).
+                                </p>
+                            </div>
+
+                            <!-- Form Paragraph Inputs -->
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block font-semibold text-slate-800 text-sm mb-2 flex items-center space-x-2">
+                                        <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-bold">1</span>
+                                        <span>Párrafo 1: El entorno físico y las mañanas</span>
+                                    </label>
+                                    <textarea id="essay_p1" oninput="autoSaveData()" rows="4" placeholder="Describe cómo es el lugar, qué elementos ves al llegar, qué clima o ambiente se respira..." class="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-800 text-sm leading-relaxed"></textarea>
+                                </div>
+
+                                <div>
+                                    <label class="block font-semibold text-slate-800 text-sm mb-2 flex items-center space-x-2">
+                                        <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-bold">2</span>
+                                        <span>Párrafo 2: La interacción y las dinámicas del día</span>
+                                    </label>
+                                    <textarea id="essay_p2" oninput="autoSaveData()" rows="4" placeholder="Describe con quiénes te relacionas, el tipo de tareas que llevas a cabo y cómo te desenvuelves..." class="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-800 text-sm leading-relaxed"></textarea>
+                                </div>
+
+                                <div>
+                                    <label class="block font-semibold text-slate-800 text-sm mb-2 flex items-center space-x-2">
+                                        <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs font-bold">3</span>
+                                        <span>Párrafo 3: El sentido, el impacto y la realización personal</span>
+                                    </label>
+                                    <textarea id="essay_p3" oninput="autoSaveData()" rows="4" placeholder="Describe qué te deja esta jornada, qué huella querés dejar en los demás y cómo fortalece tu dignidad..." class="w-full p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-slate-800 text-sm leading-relaxed"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-xl flex items-center space-x-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium">Notificación</span>
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'paisaje_cotidiano_saved_data';
+
+        // Initialize Lucide icons & load saved data on start
+        window.onload = function() {
+            lucide.createIcons();
+            
+            // Set current date by default if not previously saved
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('q_fecha').value = today;
+
+            loadSavedData();
+            updateSummary();
+        };
+
+        // Navigation Tabs Controller
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+                tab.classList.remove('block');
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+                btn.classList.add('text-brand-200', 'hover:text-white', 'hover:bg-brand-800/50');
+            });
+
+            const selectedTab = document.getElementById(tabId);
+            const selectedNav = document.getElementById('nav-' + tabId);
+
+            if (selectedTab) {
+                selectedTab.classList.remove('hidden');
+                selectedTab.classList.add('block');
+            }
+
+            if (selectedNav) {
+                selectedNav.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+                selectedNav.classList.remove('text-brand-200', 'hover:text-white', 'hover:bg-brand-800/50');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            lucide.createIcons();
+        }
+
+        // --- PERSISTENCE & LOCALSTORAGE LOGIC --- //
+
+        function autoSaveData() {
+            const formData = {
+                fecha: document.getElementById('q_fecha').value,
+                nombre: document.getElementById('q_nombre').value,
+                persona_inspiracion: document.getElementById('q_persona_inspiracion').value,
+                economico: document.getElementById('q_economico').value,
+                essay_p1: document.getElementById('essay_p1').value,
+                essay_p2: document.getElementById('essay_p2').value,
+                essay_p3: document.getElementById('essay_p3').value,
+                radios: {},
+                checkboxes: {}
+            };
+
+            // Collect all Radio inputs
+            const radioNames = [
+                'q_comodidad', 'q_espacio_personas', 'q_grupo_etario', 'q_problemas', 
+                'q_familiares', 'q_espacio_tipo', 'q_movilidad', 'q_viajes', 
+                'q_vestimenta', 'q_redes', 'q_efectividad', 'q_estructura', 
+                'q_creatividad', 'q_escena', 'q_destaque', 'q_ritmo', 
+                'q_duracion_tarea', 'q_proximos_anos', 'q_aprendizaje', 'q_prioridad_futuro'
+            ];
+
+            radioNames.forEach(name => {
+                const checked = document.querySelector(`input[name="${name}"]:checked`);
+                if (checked) formData.radios[name] = checked.value;
+            });
+
+            // Collect all Checkbox inputs
+            const checkboxNames = ['q_huella', 'q_entorno_elementos'];
+            checkboxNames.forEach(name => {
+                formData.checkboxes[name] = getCheckboxValues(name);
+            });
+
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+            } catch (e) {
+                console.warn('No se pudo guardar automáticamente:', e);
+            }
+        }
+
+        function loadSavedData() {
+            try {
+                const rawData = localStorage.getItem(STORAGE_KEY);
+                if (!rawData) return;
+
+                const data = JSON.parse(rawData);
+
+                if (data.fecha) document.getElementById('q_fecha').value = data.fecha;
+                if (data.nombre) document.getElementById('q_nombre').value = data.nombre;
+                if (data.persona_inspiracion) document.getElementById('q_persona_inspiracion').value = data.persona_inspiracion;
+                if (data.economico) {
+                    document.getElementById('q_economico').value = data.economico;
+                    document.getElementById('q_econ_val').innerText = data.economico;
+                }
+                if (data.essay_p1) document.getElementById('essay_p1').value = data.essay_p1;
+                if (data.essay_p2) document.getElementById('essay_p2').value = data.essay_p2;
+                if (data.essay_p3) document.getElementById('essay_p3').value = data.essay_p3;
+
+                // Restore radios
+                if (data.radios) {
+                    for (const [name, val] of Object.entries(data.radios)) {
+                        const radio = document.querySelector(`input[name="${name}"][value="${CSS.escape(val)}"]`);
+                        if (radio) radio.checked = true;
+                    }
+                }
+
+                // Restore checkboxes
+                if (data.checkboxes) {
+                    for (const [name, valArray] of Object.entries(data.checkboxes)) {
+                        if (Array.isArray(valArray)) {
+                            valArray.forEach(val => {
+                                const cb = document.querySelector(`input[name="${name}"][value="${CSS.escape(val)}"]`);
+                                if (cb) cb.checked = true;
+                            });
+                        }
+                    }
+                }
+
+            } catch (e) {
+                console.error('Error al restaurar los datos:', e);
+            }
+        }
+
+        function saveManual() {
+            autoSaveData();
+            showToast('¡Progreso guardado correctamente!');
+        }
+
+        function resetData() {
+            if (confirm('¿Estás seguro/a de que deseas borrar todas tus respuestas e iniciar de nuevo?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                document.getElementById('quiz-form').reset();
+                document.getElementById('essay_p1').value = '';
+                document.getElementById('essay_p2').value = '';
+                document.getElementById('essay_p3').value = '';
+                document.getElementById('q_econ_val').innerText = '5';
+                
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('q_fecha').value = today;
+
+                updateSummary();
+                showToast('Se han borrado los datos ingresados.');
+            }
+        }
+
+        // Helper to retrieve form options
+        function getRadioValue(name) {
+            const el = document.querySelector(`input[name="${name}"]:checked`);
+            return el ? el.value : null;
+        }
+
+        function getCheckboxValues(name) {
+            const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+            return Array.from(checkboxes).map(cb => cb.value);
+        }
+
+        function getQuestionText(elementId) {
+            const el = document.getElementById(elementId);
+            return el ? el.innerText.trim() : '';
+        }
+
+        // Live Update Summary Function
+        function updateSummary() {
+            const container = document.getElementById('summary-content');
+            
+            const name = document.getElementById('q_nombre').value || 'Sin especificar';
+            const date = document.getElementById('q_fecha').value || 'Sin especificar';
+            
+            let listHTML = `
+                <div class="border-b pb-2 mb-3">
+                    <p class="font-semibold text-slate-800"><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+                    <p class="font-semibold text-slate-800"><strong>Fecha:</strong> ${escapeHtml(date)}</p>
+                </div>
+                <div class="space-y-3 text-slate-700">
+            `;
+
+            let items = [];
+
+            function addQuestionSummary(qLabelId, answerText) {
+                if (answerText) {
+                    const qTitle = getQuestionText(qLabelId);
+                    items.push(`
+                        <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200/60">
+                            <p class="font-bold text-slate-800 mb-1 text-[11px] leading-snug">${escapeHtml(qTitle)}</p>
+                            <p class="text-brand-700 font-medium">${escapeHtml(answerText)}</p>
+                        </div>
+                    `);
+                }
+            }
+
+            // Questions mapping
+            addQuestionSummary('label_q1', getRadioValue('q_comodidad'));
+            addQuestionSummary('label_q2', getRadioValue('q_espacio_personas'));
+            addQuestionSummary('label_q3', getRadioValue('q_grupo_etario'));
+            addQuestionSummary('label_q4', getRadioValue('q_problemas'));
+            addQuestionSummary('label_q5', getRadioValue('q_familiares'));
+            
+            const q6Values = getCheckboxValues('q_huella');
+            if (q6Values.length > 0) addQuestionSummary('label_q6', q6Values.join(', '));
+
+            addQuestionSummary('label_q7', getRadioValue('q_espacio_tipo'));
+            addQuestionSummary('label_q8', getRadioValue('q_movilidad'));
+            addQuestionSummary('label_q9', getRadioValue('q_viajes'));
+            addQuestionSummary('label_q10', getRadioValue('q_vestimenta'));
+            
+            const q11Values = getCheckboxValues('q_entorno_elementos');
+            if (q11Values.length > 0) addQuestionSummary('label_q11', q11Values.join(', '));
+
+            addQuestionSummary('label_q12', getRadioValue('q_redes'));
+            addQuestionSummary('label_q13', getRadioValue('q_efectividad'));
+            addQuestionSummary('label_q14', getRadioValue('q_estructura'));
+            addQuestionSummary('label_q15', getRadioValue('q_creatividad'));
+            addQuestionSummary('label_q16', getRadioValue('q_escena'));
+            addQuestionSummary('label_q17', getRadioValue('q_destaque'));
+            addQuestionSummary('label_q18', getRadioValue('q_ritmo'));
+            addQuestionSummary('label_q19', getRadioValue('q_duracion_tarea'));
+            addQuestionSummary('label_q20', getRadioValue('q_proximos_anos'));
+            addQuestionSummary('label_q21', getRadioValue('q_aprendizaje'));
+
+            const q22Val = document.getElementById('q_persona_inspiracion').value;
+            if (q22Val.trim() !== '') addQuestionSummary('label_q22', q22Val);
+
+            addQuestionSummary('label_q23', getRadioValue('q_prioridad_futuro'));
+
+            const q24Val = document.getElementById('q_economico').value;
+            addQuestionSummary('label_q24', `${q24Val} / 10`);
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="border-b pb-2 mb-2">
+                        <p class="font-semibold text-slate-800"><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+                        <p class="font-semibold text-slate-800"><strong>Fecha:</strong> ${escapeHtml(date)}</p>
+                    </div>
+                    <p class="text-slate-400 italic">No has seleccionado opciones aún en la Pestaña 2.</p>
+                `;
+            } else {
+                items.forEach(item => {
+                    listHTML += item;
+                });
+                listHTML += `</div>`;
+                container.innerHTML = listHTML;
+            }
+        }
+
+        // Copy summary & essay to clipboard
+        function copyToClipboard() {
+            const name = document.getElementById('q_nombre').value || 'Sin Nombre';
+            const date = document.getElementById('q_fecha').value || '';
+            const p1 = document.getElementById('essay_p1').value;
+            const p2 = document.getElementById('essay_p2').value;
+            const p3 = document.getElementById('essay_p3').value;
+
+            const summaryDiv = document.getElementById('summary-content');
+            let summaryText = summaryDiv.innerText;
+
+            let textToCopy = `=== EL PAISAJE COTIDIANO - REFLEXIÓN ===\n`;
+            textToCopy += `Nombre: ${name}\nFecha: ${date}\n\n`;
+            textToCopy += `--- RESUMEN DE SELECCIONES Y PREGUNTAS ---\n${summaryText}\n\n`;
+            textToCopy += `--- DESCRIPCIÓN DEL PAISAJE COTIDIANO ---\n\n`;
+            textToCopy += `PÁRRAFO 1:\n${p1 || '(Sin redactar)'}\n\n`;
+            textToCopy += `PÁRRAFO 2:\n${p2 || '(Sin redactar)'}\n\n`;
+            textToCopy += `PÁRRAFO 3:\n${p3 || '(Sin redactar)'}\n`;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('¡Resumen y texto copiados al portapapeles!');
+            } catch (err) {
+                showToast('Error al copiar al portapapeles.');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
